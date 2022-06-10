@@ -20,6 +20,7 @@ return new class extends Migration
             $table->char('no_hp', 20);
             $table->char('no_ktp', 50);
             $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at');
         });
     }
 

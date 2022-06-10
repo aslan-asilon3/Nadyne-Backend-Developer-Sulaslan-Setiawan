@@ -14,8 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('log_redeems', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->bigInteger('id');
+            $table->bigInteger('user_id');
+            $table->bigInteger('unique_code_id');
+            $table->timestamp('reedem_date');
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at');
         });
     }
 

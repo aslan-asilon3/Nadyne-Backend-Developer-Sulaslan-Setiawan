@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class unique_code extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+    	'id',
+        'unique_code',
+        'status_redeem',
+    ];
 }
